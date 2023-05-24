@@ -25,9 +25,10 @@ https://cdn.jsdelivr.net/gh/BarneyWhiteman/p5.filterShader@latest/p5.filterShade
 
 ## Usage
 
-To use p5.filterShader, simply load in the [shader](https://p5js.org/reference/#/p5.Shader) you want in the [`preload` function](https://p5js.org/reference/#/p5/loadShader), then call
-`filterShader` and pass in your shader object to apply the shader. This is often done *after* you've drawn the rest of the frame to add a post processing effect, however it can be called whenever suits your needs.
-  
+To use p5.filterShader, simply load in the [shader](https://p5js.org/reference/#/p5.Shader) you want in the [`preload` function](https://p5js.org/reference/#/p5/loadShader), then call `filterShader` and pass in your shader object to apply the shader. This is often done *after* you've drawn the rest of the frame to add a post processing effect, however it can be called whenever suits your needs.
+
+There is a [full example sketch](https://github.com/BarneyWhiteman/p5.filterShader/tree/main/example) which you can check out.
+
 ```js
 let myFilterShader;
 
