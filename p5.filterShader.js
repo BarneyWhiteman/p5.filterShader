@@ -1,20 +1,20 @@
 p5.prototype.filterShader = function(shaderObj) {
-  _filterShader(shaderObj, this._renderer, image);
+  _filterShader(shaderObj, this._renderer, this);
 }
 
 p5.Graphics.prototype.filterShader = function (shaderObj) {
-  _filterShader(shaderObj, this);
+  _filterShader(shaderObj, this, this);
 };
 
 p5.Image.prototype.filterShader = function (shaderObj) {
-  _filterShader(shaderObj, this);
+  _filterShader(shaderObj, this, this);
 };
 
 p5.Renderer.prototype.filterShader = function (shaderObj) {
-  _filterShader(shaderObj, this);
+  _filterShader(shaderObj, this, this);
 };
 
-function _filterShader(shaderObj, cnv, imageFunc) {
+function _filterShader(shaderObj, cnv, drawer) {
   
   if(!cnv._filterTexture ||
       cnv._filterTexture.width !== cnv.width ||
@@ -30,10 +30,21 @@ function _filterShader(shaderObj, cnv, imageFunc) {
   shaderObj.setUniform("filter_res", [cnv.width, cnv.height]);
   
   tex.rect(0, 0, tex.width, tex.height);
+    
+  drawer.push();
+  drawer.resetMatrix();
+  drawer.imageMode(CORNER);
   
-  if(!imageFunc) {
-    imageFunc = cnv.image;
+  let x = 0;
+  let y = 0;
+  
+  if(drawer._renderer.isP3D) {
+    x = -cnv.width/2;
+    y = -cnv.height/2;
   }
   
-  imageFunc(tex, 0, 0, cnv.width, cnv.height);
+  drawer.clear();
+  drawer.image(tex, x, y, cnv.width, cnv.height);
+  
+  drawer.pop();
 }
