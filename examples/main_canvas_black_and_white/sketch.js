@@ -1,4 +1,6 @@
-// A simple example sketch of how to use the p5.filterShader library
+// grey scale shader post processing the main canvas
+//
+// A simple example sketch showing the p5.filterShader library
 // https://github.com/BarneyWhiteman/p5.filterShader
 
 let greyscaleShader;
