@@ -3,6 +3,10 @@ A library that allows you to use a shader to add post processing filters to any 
 
 This library is mostly for convinence and wraps some functionality that I was frequently using in my own sketches.
 
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/colour_banner.png)
+
+<small><em>Above: a screenshot of the [toon shader example](https://github.com/BarneyWhiteman/p5.filterShader/tree/main/examples/off_screen_toon_shader)</em></small>
+
 ## Get the library
 The library must be added to your sketch *after* the p5.js library has been included but *before* you include your own sketch files.
 
@@ -27,8 +31,6 @@ https://cdn.jsdelivr.net/gh/BarneyWhiteman/p5.filterShader@0.0.2/p5.filterShader
 
 To use p5.filterShader, simply load in the [shader](https://p5js.org/reference/#/p5.Shader) you want in the [`preload` function](https://p5js.org/reference/#/p5/loadShader), then call `filterShader` and pass in your shader object to apply the shader. This is often done *after* you've drawn the rest of the frame to add a post processing effect, however it can be called whenever suits your needs.
 
-There is a [full example sketch](https://github.com/BarneyWhiteman/p5.filterShader/tree/main/example) which you can check out.
-
 ```js
 let myFilterShader;
 
@@ -51,6 +53,8 @@ function draw() {
   filterShader(myFilterShader);
 }
 ```
+
+There is a basic [example sketch](https://github.com/BarneyWhiteman/p5.filterShader/tree/main/examples/main_canvas_black_and_white) which applies a filter to the main canvas.
 
 ### Shader uniforms
 When used inside `filterShader`, the shader object is passed two uniform values.
@@ -154,3 +158,5 @@ function draw() {
   image(offScreenGraphic, 0, 0);
 }
 ```
+
+There is an [example sketch](https://github.com/BarneyWhiteman/p5.filterShader/tree/main/examples/off_screen_toon_shader) which applies a filter to an off screen graphics object.
