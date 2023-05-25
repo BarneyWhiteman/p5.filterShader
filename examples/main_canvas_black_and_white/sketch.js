@@ -12,6 +12,8 @@ function preload() {
 
 function setup() {
   createCanvas(400, 400);
+  textAlign(CENTER, CENTER);
+  textSize(25);
   strokeWeight(10);
 }
 
@@ -26,6 +28,10 @@ function draw() {
   stroke(0, 255, 255);
   fill(0, 255, 0);
   circle(300, 300, 100);
+  
+  noStroke();
+  fill(255, 0, 255);
+  text("click to apply filter", width/2, height/2);
   
   if(mouseIsPressed) {
     // If the mouse is pressed, filter our image using our shader
