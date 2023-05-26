@@ -162,6 +162,8 @@ Look at the posterise filter example to see a more complete version of using `fi
 ## Examples
 You can find examples sketches using the `filterShader` function in the [online p5.js editor](https://editor.p5js.org/BarneyCodes/collections/qwCiTya1e).
 
-There are currently two examples:
+There are currently four examples:
 - A basic sketch using a greyscale filter on the main canvas [here](https://editor.p5js.org/BarneyCodes/sketches/SGaANoXS2)
+- A sketch using a grain/noise filter on the main canvas [here](https://editor.p5js.org/BarneyCodes/sketches/aCLksszch)
+- A sketch using a "glitch" filter from [one of my videos](https://youtu.be/r5YkU5Xu4_E) on the main canvas after using an off screen canvas [here](https://editor.p5js.org/BarneyCodes/sketches/KTsPyqBSd)
 - A more advanced sketch using a posterise filter on an off screen canvas, using setUniform [here](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)
