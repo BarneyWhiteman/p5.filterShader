@@ -70,6 +70,7 @@ uniform vec2 filter_res;
 ```
 
 **`filter_background`** is the image the filter is being applied to.
+
 **`filter_res`** holds the resolution of the image in pixels.
 
 
@@ -161,6 +162,6 @@ Look at the posterise filter example to see a more complete version of using `fi
 ## Examples
 You can find examples sketches using the `filterShader` function in the [online p5.js editor](https://editor.p5js.org/BarneyCodes/collections/qwCiTya1e).
 
-There are currently two examples
+There are currently two examples:
 - A basic sketch using a greyscale filter on the main canvas [here](https://editor.p5js.org/BarneyCodes/sketches/SGaANoXS2)
 - A more advanced sketch using a posterise filter on an off screen canvas, using setUniform [here](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)
