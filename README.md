@@ -3,7 +3,7 @@ A library that allows you to use a fragment shader to add post processing filter
 
 This library is mostly for convinence and wraps some functionality that I was frequently using in my own sketches.
 
-![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/colour_banner.png)
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_posterise.png)
 
 <small><em>Above: a screenshot of the [posterise shader example](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)</em></small>
 
@@ -70,6 +70,7 @@ uniform vec2 filter_res;
 ```
 
 **`filter_background`** is the image the filter is being applied to.
+
 **`filter_res`** holds the resolution of the image in pixels.
 
 
@@ -143,6 +144,7 @@ Look at the posterise filter example to see a more complete version of using `se
 ```js
 
 ...
+
 // Multiple drawing surfaces 
 let canvas = createCanvas(400, 400);
 let graphics = createGraphics(400, 400);
@@ -159,8 +161,36 @@ graphics.filterShader(myFilterShader);
 Look at the posterise filter example to see a more complete version of using `filterShader` on an seperate graphics instance.
 
 ## Examples
-You can find examples sketches using the `filterShader` function in the [online p5.js editor](https://editor.p5js.org/BarneyCodes/collections/qwCiTya1e).
+You can find all of the `filterShader` example sketches in [this collection](https://editor.p5js.org/BarneyCodes/collections/qwCiTya1e) on the online p5.js editor.
 
-There are currently two examples
-- A basic sketch using a greyscale filter on the main canvas [here](https://editor.p5js.org/BarneyCodes/sketches/SGaANoXS2)
-- A more advanced sketch using a posterise filter on an off screen canvas, using setUniform [here](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)
+### Basic greyscale filter
+
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_greyscale.png)
+
+A basic sketch using a greyscale filter on the main canvas. 
+
+[Example here](https://editor.p5js.org/BarneyCodes/sketches/SGaANoXS2).
+
+### Stacked noise and glitch filters
+
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_noise_glitch.png)
+
+This sketch combines two filters. The first is a noise shader that adds random noise to the canvas, the second is a glitch shader from [one of my videos](https://youtu.be/r5YkU5Xu4_E).
+
+[Example here](https://editor.p5js.org/BarneyCodes/sketches/KTsPyqBSd)
+
+### Posterise filter on an off screen canvas
+
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_posterise.png)
+
+This more advanced example shows how to use the `filterShader` function on an off screen canvas.
+
+[Example here](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)
+
+### Game of Life back buffer
+
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_gol.png)
+
+By not clearing the canvas between `filterShader` calls, its possible to use the output from the last shader pass as the input for the next. This shader also comes from [one of my videos](https://youtu.be/XcII7comJ00). The GPU is very efficient at cellular automata and using `filterShader` makes this very simple.
+
+[Example here](https://editor.p5js.org/BarneyCodes/sketches/dILD0aD2L).
