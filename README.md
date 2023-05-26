@@ -163,34 +163,26 @@ Look at the posterise filter example to see a more complete version of using `fi
 ## Examples
 You can find all of the `filterShader` example sketches in [this collection](https://editor.p5js.org/BarneyCodes/collections/qwCiTya1e) on the online p5.js editor.
 
-### Basic greyscale filter
+### [Basic greyscale filter](https://editor.p5js.org/BarneyCodes/sketches/SGaANoXS2)
 
 ![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_greyscale.png)
 
-A basic sketch using a greyscale filter on the main canvas. 
+A basic sketch using a greyscale filter on the main canvas.
 
-[Example here](https://editor.p5js.org/BarneyCodes/sketches/SGaANoXS2).
-
-### Stacked noise and glitch filters
+### [Stacked noise and glitch filters](https://editor.p5js.org/BarneyCodes/sketches/KTsPyqBSd)
 
 ![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_noise_glitch.png)
 
 This sketch combines two filters. The first is a noise shader that adds random noise to the canvas, the second is a glitch shader from [one of my videos](https://youtu.be/r5YkU5Xu4_E).
 
-[Example here](https://editor.p5js.org/BarneyCodes/sketches/KTsPyqBSd)
-
-### Posterise filter on an off screen canvas
+### [Posterise filter on an off screen canvas](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)
 
 ![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_posterise.png)
 
 This more advanced example shows how to use the `filterShader` function on an off screen canvas.
 
-[Example here](https://editor.p5js.org/BarneyCodes/sketches/xfVcdKmtM)
-
-### Game of Life back buffer
+### [Game of Life back buffer](https://editor.p5js.org/BarneyCodes/sketches/dILD0aD2L)
 
 ![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_gol.png)
 
 By not clearing the canvas between `filterShader` calls, its possible to use the output from the last shader pass as the input for the next. This shader also comes from [one of my videos](https://youtu.be/XcII7comJ00). The GPU is very efficient at cellular automata and using `filterShader` makes this very simple.
-
-[Example here](https://editor.p5js.org/BarneyCodes/sketches/dILD0aD2L).
