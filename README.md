@@ -194,3 +194,11 @@ This more advanced example shows how to use the `filterShader` function on an of
 By not clearing the canvas between `filterShader` calls, its possible to use the output from the last shader pass as the input for the next. This shader also comes from [one of my videos](https://youtu.be/XcII7comJ00). The GPU is very efficient at cellular automata and using `filterShader` makes this very simple.
 
 [Example here](https://editor.p5js.org/BarneyCodes/sketches/dILD0aD2L).
+
+### Dither shader
+
+![image](https://raw.githubusercontent.com/BarneyWhiteman/p5.filterShader/main/example_dither.png)
+
+This example uses a blue noise texture to create a dithered shading effect.
+
+[Example here](https://editor.p5js.org/BarneyCodes/sketches/50J5UzeSo).
