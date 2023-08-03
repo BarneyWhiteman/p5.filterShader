@@ -14,13 +14,13 @@ The library must be added to your sketch *after* the p5.js library has been incl
 The library is available via the following CDN:
 
 ```
-https://cdn.jsdelivr.net/gh/BarneyWhiteman/p5.filterShader@0.0.2/p5.filterShader.min.js
+https://cdn.jsdelivr.net/gh/BarneyWhiteman/p5.filterShader@0.0.3/p5.filterShader.min.js
 ```
 
 You can include the following in your `index.html` *after* including the p5.js library:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/BarneyWhiteman/p5.filterShader@0.0.2/p5.filterShader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/BarneyWhiteman/p5.filterShader@0.0.3/p5.filterShader.min.js"></script>
 ```
 
 ### Self-hosted
