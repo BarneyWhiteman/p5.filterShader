@@ -16,10 +16,11 @@ p5.Renderer.prototype.filterShader = function (shaderObj) {
 
 function _filterShader(shaderObj, cnv, drawer) {
   
-  if(!cnv._filterTexture ||
-      cnv._filterTexture.width !== cnv.width ||
-      cnv._filterTexture.height !== cnv.height) {
+  if(!cnv._filterTexture) {
     cnv._filterTexture = createGraphics(cnv.width, cnv.height, WEBGL);
+  } else if (cnv._filterTexture.width !== cnv.width ||
+      cnv._filterTexture.height !== cnv.height) {
+    cnv._filterTexture.resizeCanvas(cnv.width, cnv.height);
   }
   
   const tex = cnv._filterTexture;
